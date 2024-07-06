@@ -1,7 +1,7 @@
 import django
 import django.dispatch
 
-if django.get_version().startswith("4."):
+if int(django.get_version().split('.')[0]) >= 4:
     likes_enabled_test = django.dispatch.Signal()
     can_vote_test = django.dispatch.Signal()
 
